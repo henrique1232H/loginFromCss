@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&display=swap');
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--text-base);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'main photo';
+    
+}
+
+.grid .form {
+    grid-area: main;
+    height: 100vh;
+    width: 100%;
+    background: var(--background);
+}
+
+.grid .img {
+    padding: 2rem  4rem;
+}
+
+.formulario {
+    border-radius: 0.4rem ;
+    margin: 6rem 10rem;
+    padding: 6rem 8rem;
+    height: 450px;
+    width: 50rem;
+    background: var(--form-background);
+}
+
+.title-flex {
+    display: flex;
+    align-items: center;
+    color: var(--text-title);
+}
+
+.title-flex h2 {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+form {
+    margin-top: 4rem;
+    
+}
+
+label {
+    color: var(--text-base);
+    font-size: 1.3rem;
+}
+
+form .label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+form .input-flex {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-flex .e-mail::placeholder {
+    background-image: url("../img/mail.svg");
+}
+
+.input-flex .alinhar {
+    display: flex;
+    align-items: center;
+}
+.alinhar {
+    margin-left: 0.2rem;
+}
+
+.alinhar label {
+    margin-left: 0.5rem;
+}
+
+form input {
+    border: 1px solid var(--text-base);
+    border-radius: 0.4rem;
+    background: var(--form-background);
+    height: 3.4rem;
+}
+
+.button {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.button button {
+    border: none;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    margin: 1rem 0;
+    height: 4rem;
+    cursor: pointer;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+input {
+    color: var(--text-base);
+}
+
+form .label .e-mail {
+    background-image: url('../img/mail.svg');
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+    background-position: 0.8rem 1rem;
+    display: flex;
+    padding-left: 2.6rem;
+    padding-top: 0.3rem;
+}
+
+form .label .e-mail:focus {
+    background-image: url('../img/mail-focus.svg');
+}
+
+input:focus {
+    color: #ffc632;
+}
+
+form .label .password {
+    background-image: url('../img/lock.svg');
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+    background-position: 0.8rem 0.8rem;
+    display: flex;
+    padding-left: 2.6rem;
+    padding-top: 0.3rem;
+}
+
+
+form .label .password:focus {
+    background-image: url('../img/lock-focus.svg');
+}
+
+form .label .password::placeholder:focus {
+    background-image: url('../img/eye.svg');
+}
+
+
+form .input-flex .checkbox:checked {
+    background-image: url('../img/check.svg');
+}
+
+.button a {
+    display: flex;
+    justify-content: center;
+}
+
+.grid .photo {
+    grid-area: photo;
+    background-image: url('../img/side-image.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (max-width: 700px) and (max-height: 700px) {
+    .formulario {
+        margin: 1rem auto;
+        background: var(--background);
+        padding: 1rem 1rem;
+
+    }
+    .grid {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media(max-width: 800px) {
+
+    .formulario {
+        margin: 5rem auto;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media (max-height: 570px) and (max-width:1340px) {
+
+    .grid .photo {
+        height: auto;
+    }
+}
